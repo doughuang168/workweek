@@ -2,6 +2,7 @@
 <html data-ng-app='ngQuickDateDemo'>
 <head>
     <title>ngQuickDate Demo</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/ng-quick-date-plus-default-theme.css" media="all" />
     <style type="text/css">
         form.ng-dirty .ng-invalid .quickdate-button {
@@ -10,7 +11,8 @@
     </style>
 </head>
 <body>
-    <div ng-controller='DemoCtrl'>
+    <div style="width:100%" align="center" ng-controller='DemoCtrl'>
+	<h2>Angular date picker directive as workweek micro-service consumer</h2>
         <form name='date_form' novalidate>
             <p>
                 <label>My Date</label>
@@ -27,9 +29,6 @@
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <!-- <script type='text/javascript' src='vendor/sugar.js' /> -->
-    <!-- <script type='text/javascript' src='vendor/date.js' /> -->
-    <!-- <script type='text/javascript' src='bower_components/jquery/jquery.js' /> -->
     <script type="text/javascript" src="js/ng-quick-date.js"></script>
     <script type='text/javascript'>
       var app = angular.module("ngQuickDateDemo", ["ngQuickDate"]);
