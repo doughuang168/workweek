@@ -18,19 +18,28 @@
                 <label>My Date</label>
                 <quick-datepicker name='myDate' ng-model='myDate' workweek-Service='workweek'  required></quick-datepicker>
             </p>
-            <p>
-                <label>Some other field</label>
-                <input type='text' name='otherField' ng-model='otherField' required />
+            <br />
+            <br />
+       	    <a href='' ng-click='setToToday()'>Set Date to Today</a>
+            <br />
+            <br />
+ 	    <p>
+                <label>Command line to get workweek : </label>
+                <label id='cmd_line' />
             </p>
+            <br/>
+            <br/>
+        View detail in <a href='https://github.com/doughuang168/workweek-mean-stack-docker'>GitHub</a>
         </form>
         <br />
         <br />
-        <a href='' ng-click='setToToday()'>Set Date to Today</a>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/ng-quick-date.js"></script>
     <script type='text/javascript'>
+      var endpoint = window.location.href;
+      document.getElementById("cmd_line").innerHTML = "curl " + endpoint+ "workweek/2015-02-01";
       var app = angular.module("ngQuickDateDemo", ["ngQuickDate"]);
       app.config(function(ngQuickDateDefaultsProvider) {
           return ngQuickDateDefaultsProvider.set({  
